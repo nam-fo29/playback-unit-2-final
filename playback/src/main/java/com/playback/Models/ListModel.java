@@ -3,6 +3,8 @@ package com.playback.Models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "lists")
 public class ListModel {
@@ -14,7 +16,7 @@ public class ListModel {
     private String name;
 
     @OneToMany(mappedBy = "lists", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ListItem> items;
+    private List<ListItemModel> items;
 
     public ListModel() {
     }
@@ -36,11 +38,11 @@ public class ListModel {
         this.name = name;
     }
 
-    public List<ListItem> getItems() {
+    public List<ListItemModel> getItems() {
         return items;
     }
 
-    public void setItems(List<ListItem> items) {
+    public void setItems(List<ListItemModel> items) {
         this.items = items;
     }
 }
