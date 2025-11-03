@@ -31,7 +31,7 @@ public class ListController {
         return listRepository.findAll();
     }
 
-    @GetMapping
+    @GetMapping("/{name}")
     public ListModel getListByName(String name) {
         return listRepository.findByName(name).orElse(null);
     }

@@ -12,7 +12,7 @@ public class ListItemModel {
 
     @ManyToOne
     @JoinColumn(name = "list_id", nullable = false)
-    private ListModel list;
+    private ListModel lists;
 
     @ManyToOne
     @JoinColumn(name = "media_id", nullable = false)
@@ -22,7 +22,7 @@ public class ListItemModel {
     }
 
     public ListItemModel(ListModel list, MediaModel media) {
-        this.list = list;
+        this.lists = list;
         this.media = media;
     }
 
@@ -31,11 +31,11 @@ public class ListItemModel {
     }
 
     public ListModel getList() {
-        return list;
+        return lists;
     }
 
     public void setList(ListModel list) {
-        this.list = list;
+        this.lists = list;
     }
 
     public MediaModel getMedia() {
