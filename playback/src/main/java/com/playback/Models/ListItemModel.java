@@ -1,5 +1,6 @@
 package com.playback.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,7 +13,8 @@ public class ListItemModel {
 
     @ManyToOne
     @JoinColumn(name = "list_id", nullable = false)
-    private ListModel lists;
+    @JsonBackReference
+    private ListModel list;
 
     @ManyToOne
     @JoinColumn(name = "media_id", nullable = false)
@@ -22,7 +24,7 @@ public class ListItemModel {
     }
 
     public ListItemModel(ListModel list, MediaModel media) {
-        this.lists = list;
+        this.list = list;
         this.media = media;
     }
 
@@ -31,11 +33,11 @@ public class ListItemModel {
     }
 
     public ListModel getList() {
-        return lists;
+        return list;
     }
 
     public void setList(ListModel list) {
-        this.lists = list;
+        this.list = list;
     }
 
     public MediaModel getMedia() {
