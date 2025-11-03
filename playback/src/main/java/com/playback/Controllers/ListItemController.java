@@ -25,7 +25,12 @@ public class ListItemController {
         return listItemRepository.findAll();
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
+    public ListItemModel createListItem(@RequestBody ListItemModel item) {
+        return listItemRepository.save(item);
+    }
+
+    @PutMapping("/{id}")
     public ListItemModel updateListItem(@PathVariable("id") Long id, @RequestBody ListItemModel itemDetails) {
         ListItemModel listItem = listItemRepository.findById(id).orElse(null);
         if (listItem != null) {
