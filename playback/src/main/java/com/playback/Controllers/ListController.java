@@ -47,6 +47,16 @@ public class ListController {
         return listRepository.save(list);
     }
 
+    @PutMapping("/{id}")
+    public ListModel updateList(@PathVariable("id") Long id, @RequestBody ListModel updatedList) {
+        ListModel list = listRepository.findById(id).orElse(null);
+        if (list != null) {
+            list.setName(updatedList.getName());
+            return listRepository.save(list);
+        }
+        return null;
+    }
+
     @DeleteMapping("/{name}/remove/{mediaId}")
     public String removeMediaFromList(@PathVariable String name, @PathVariable Long mediaId) {
         ListModel list = listRepository.findByName(name).orElse(null);
