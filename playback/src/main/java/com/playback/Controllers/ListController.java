@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/lists")
+@RequestMapping("/lists")
 @CrossOrigin(origins = "*")
 public class ListController {
 
@@ -37,7 +37,7 @@ public class ListController {
         return listRepository.findAll();
     }
 
-    @GetMapping("/name/{name}")
+    @GetMapping("/{name}")
     public ListModel getListByName(@PathVariable("name") String name) {
         return listRepository.findByName(name).orElse(null);
     }
@@ -63,9 +63,9 @@ public class ListController {
         return "List with id " + id + " has been deleted.";
     }
 
-    @PostMapping("/{listId}/items/{mediaId}")
-    public String addMediaToList(@PathVariable Long listId, @PathVariable Long mediaId) {
-        ListModel list = listRepository.findById(listId).orElse(null);
+    @PostMapping("/{name}/items/{mediaId}")
+    public String addMediaToList(@PathVariable("name") String name, @PathVariable("mediaId") Long mediaId) {
+        ListModel list = listRepository.findByName(name).orElse(null);
         MediaModel media = mediaRepository.findById(mediaId).orElse(null);
         if (list != null && media != null) {
             ListItemModel listItem = new ListItemModel(list, media);
@@ -73,5 +73,18 @@ public class ListController {
             return "Media added to list successfully.";
         }
         return "List or Media not found.";
+    }
+
+    @DeleteMapping("/{name}/remove/{mediaId}")
+    public String removeMediaFromList(@PathVariable("name") String name, @PathVariable("mediaId") Long mediaId) {
+        ListModel list = listRepository.findByName(name).orElse(null);
+        if (list != null) {
+            listItemRepository.findAll().stream()
+                    .filter(i -> i.getList().getId().equals(list.getId()) && i.getMedia().getId().equals(mediaId))
+                    .findFirst()
+                    .ifPresent(listItemRepository::delete);
+            return "Media removed from list successfully.";
+        }
+        return "List not found.";
     }
 }
