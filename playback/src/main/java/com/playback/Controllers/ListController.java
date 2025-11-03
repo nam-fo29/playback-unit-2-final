@@ -37,7 +37,7 @@ public class ListController {
     }
 
     @PostMapping("/{name}/add/{mediaId}")
-    public String addMediaToList(PathVariable String name, @PathVariable Long mediaId) {
+    public String addMediaToList(@PathVariable("name") String name, @PathVariable("mediaId") Long mediaId) {
         ListModel list = listRepository.findByName(name).orElse(null);
         MediaModel media = mediaRepository.findById(mediaId).orElse(null);
 
@@ -45,5 +45,16 @@ public class ListController {
         listItemRepository.save(item);
 
         return media.getTitle() + "added to " + list.getName();
+    }
+
+    @DeleteMapping("/{name}/remove/{mediaId}")
+    public String removeMediaFromList(@PathVariable String name, @PathVariable Long mediaId) {
+        ListModel list = listRepository.findByName(name).orElse(null);
+
+        listItemRepository.findAll().stream()
+                .filter(i -> i.getList().equals(list) && i.getMedia().getId().equals(mediaId))
+                .findFirst()
+                .ifPresent(listItemRepository::delete);
+        return "Media removed from " + list.getName();
     }
 }
