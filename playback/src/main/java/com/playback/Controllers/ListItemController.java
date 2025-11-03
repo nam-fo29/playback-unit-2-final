@@ -4,10 +4,7 @@ package com.playback.Controllers;
 import com.playback.Models.ListItemModel;
 import com.playback.Repositories.ListItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,4 +24,17 @@ public class ListItemController {
     public List<ListItemModel> getAllListItems() {
         return listItemRepository.findAll();
     }
+
+    @PostMapping("/{id}")
+    public ListItemModel updateListItem(@PathVariable("id") Long id, @RequestBody ListItemModel itemDetails) {
+        ListItemModel listItem = listItemRepository.findById(id).orElse(null);
+        if (listItem != null) {
+            listItem.setList(itemDetails.getList());
+            listItem.setMedia(itemDetails.getMedia());
+            return listItemRepository.save(listItem);
+        }
+        return null;
+    }
+
+
 }
