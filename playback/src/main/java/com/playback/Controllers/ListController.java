@@ -57,14 +57,9 @@ public class ListController {
         return null;
     }
 
-    @DeleteMapping("/{name}/remove/{mediaId}")
-    public String removeMediaFromList(@PathVariable String name, @PathVariable Long mediaId) {
-        ListModel list = listRepository.findByName(name).orElse(null);
-
-        listItemRepository.findAll().stream()
-                .filter(i -> i.getList().equals(list) && i.getMedia().getId().equals(mediaId))
-                .findFirst()
-                .ifPresent(listItemRepository::delete);
-        return "Media removed from " + list.getName();
+    @DeleteMapping("/{id}")
+    public String deleteList(@PathVariable("id") Long id) {
+        listRepository.deleteById(id);
+        return "List with id " + id + " has been deleted.";
     }
 }
