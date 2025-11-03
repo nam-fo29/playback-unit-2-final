@@ -9,7 +9,7 @@ import com.playback.Repositories.MediaRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/media")
+@RequestMapping("/media")
 @CrossOrigin(origins = "*")
 public class MediaController {
 
