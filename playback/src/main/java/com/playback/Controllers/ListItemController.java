@@ -41,5 +41,10 @@ public class ListItemController {
         return null;
     }
 
+    @DeleteMapping("/{id}")
+    public String deleteListItem(@PathVariable("id") Long id) {
+        listItemRepository.deleteById(id);
+        return "ListItem with id " + id + " has been deleted.";
+    }
 
 }
