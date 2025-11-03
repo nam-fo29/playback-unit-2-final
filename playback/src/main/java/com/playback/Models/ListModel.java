@@ -1,6 +1,7 @@
 package com.playback.Models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -15,7 +16,8 @@ public class ListModel {
 
     private String name;
 
-    @OneToMany(mappedBy = "lists", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "list", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<ListItemModel> items;
 
     public ListModel() {
