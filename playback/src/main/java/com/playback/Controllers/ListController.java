@@ -18,33 +18,33 @@ import java.util.List;
 public class ListController {
 
     @Autowired
-    private ListRepository listRepository;
+    private final ListRepository listRepository;
 
     @Autowired
-    private ListItemRepository listItemRepository;
+    private final ListItemRepository listItemRepository;
 
     @Autowired
-    private MediaRepository mediaRepository;
+    private final MediaRepository mediaRepository;
+
+    public ListController(ListRepository listRepository, ListItemRepository listItemRepository, MediaRepository mediaRepository) {
+        this.listRepository = listRepository;
+        this.listItemRepository = listItemRepository;
+        this.mediaRepository = mediaRepository;
+    }
 
     @GetMapping
     public List<ListModel> getAllLists() {
         return listRepository.findAll();
     }
 
-    @GetMapping("/{name}")
-    public ListModel getListByName(String name) {
+    @GetMapping("/name/{name}")
+    public ListModel getListByName(@PathVariable("name") String name) {
         return listRepository.findByName(name).orElse(null);
     }
 
-    @PostMapping("/{name}/add/{mediaId}")
-    public String addMediaToList(@PathVariable("name") String name, @PathVariable("mediaId") Long mediaId) {
-        ListModel list = listRepository.findByName(name).orElse(null);
-        MediaModel media = mediaRepository.findById(mediaId).orElse(null);
-
-        ListItemModel item = new ListItemModel(list, media);
-        listItemRepository.save(item);
-
-        return media.getTitle() + "added to " + list.getName();
+    @PostMapping
+    public ListModel createList(@RequestBody ListModel list) {
+        return listRepository.save(list);
     }
 
     @DeleteMapping("/{name}/remove/{mediaId}")
