@@ -62,4 +62,16 @@ public class ListController {
         listRepository.deleteById(id);
         return "List with id " + id + " has been deleted.";
     }
+
+    @PostMapping("/{listId}/items/{mediaId}")
+    public String addMediaToList(@PathVariable Long listId, @PathVariable Long mediaId) {
+        ListModel list = listRepository.findById(listId).orElse(null);
+        MediaModel media = mediaRepository.findById(mediaId).orElse(null);
+        if (list != null && media != null) {
+            ListItemModel listItem = new ListItemModel(list, media);
+            listItemRepository.save(listItem);
+            return "Media added to list successfully.";
+        }
+        return "List or Media not found.";
+    }
 }
