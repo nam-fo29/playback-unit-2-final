@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="Adding frontend before beginning tweaks for background integration">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="Deleted files cleanup commit">
+      <change beforePath="$PROJECT_DIR$/out/production/playback-unit-2-final/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762480703982</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Deleted files cleanup commit">
+      <option name="closed" value="true" />
+      <created>1762481667877</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762481667877</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -302,6 +308,7 @@
     <MESSAGE value="Added DeleteMapping to ListItemController" />
     <MESSAGE value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
     <MESSAGE value="Adding frontend before beginning tweaks for background integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding frontend before beginning tweaks for background integration" />
+    <MESSAGE value="Deleted files cleanup commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted files cleanup commit" />
   </component>
 </project>
