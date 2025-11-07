@@ -1,0 +1,183 @@
+@media only screen
+/* iPhone 16 Pro */
+and (max-width: 430px) and (min-width:375px) and (-webkit-device-pixel-ratio: 3) {
+
+    .top-menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px !important;
+        text-align: center;
+    }
+
+    h1.website-name {
+        font-size: 28px;
+        letter-spacing: normal;
+        word-break: break-word;
+        text-align: center;
+        line-height: 1.2;
+        width: 94vw;
+    }
+
+    h1.website-name::first-letter,
+    span.fifth-letter {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    body {
+        font-size: 10px;
+        padding: 8px;
+        width: auto;
+        height: auto;
+    }
+
+    .media-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .rewind-list-items,
+    .up-next-list-items {
+        flex-direction: column !important;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .media-type-column {
+        border-left: none !important;
+        border-top: 2px solid rgba(255, 109, 68, 0.5);
+        padding-left: 0;
+        padding-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .media-list {
+        min-width: 0;
+    }
+
+    .media-card {
+        flex-direction: column;
+        max-width: 1000px !important;
+        height: 60%;
+    }
+
+    .media-card img {
+        width: 50px !important;
+        height: auto;
+
+    }
+
+    .media-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media-card p {
+        display: grid;
+        grid-row: 2 / 1;
+        font-size: 10px !important;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        width: 94vw;
+    }
+
+    .media-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen
+/*iPad*/
+and (width:810px) and (height:1080px) {
+    .top-menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px !important;
+        text-align: center;
+    }
+
+    h1.website-name {
+        font-size: 28px;
+        letter-spacing: normal;
+        word-break: break-word;
+        text-align: center;
+        line-height: 1.2;
+        width: 94vw;
+    }
+
+    h1.website-name::first-letter,
+    span.fifth-letter {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    body {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    body, html {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .media-buttons {
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .rewind-list-items,
+    .up-next-list-items {
+        flex-direction: column !important;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .media-type-column {
+        border-left: none !important;
+        border-top: 2px solid rgba(255, 109, 68, 0.5);
+        padding-left: 0;
+        padding-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .media-list {
+        min-width: 0;
+        max-width: 750px;
+    }
+
+    .media-card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        width: 94vw;
+    }
+
+
+}

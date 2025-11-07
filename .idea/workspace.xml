@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="Fixed endpoints and added JSON annotations to handle HTTP requests">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playback/app.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nam-fo29"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nam-fo29/playback-unit-2-final.git",
+    "accountId": "5dd71974-192e-4281-80b9-7d6e7fd5cd4a"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="34fXUXCI3aAktfg8BWxJLZN1gWF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PB_Run.executor": "Run",
+    "Application.PlayBackApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/crud-ops"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="PB_Run" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/playback/app.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="com.playback.PlayBackApplication" />
+      <module name="playback" />
+      <option name="PROGRAM_PARAMETERS" value="$MAVEN_REPOSITORY$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="" />
+      <created>1761605616075</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761605616075</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial model setup for media.">
+      <option name="closed" value="true" />
+      <created>1762123212259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762123212259</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Repository setup for media">
+      <option name="closed" value="true" />
+      <created>1762123533692</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762123533692</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reworking model setup">
+      <option name="closed" value="true" />
+      <created>1762126273485</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762126273485</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Reworking model setup">
+      <option name="closed" value="true" />
+      <created>1762126327108</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762126327108</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Models for differentiating which list a media item is on">
+      <option name="closed" value="true" />
+      <created>1762126661418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762126661418</updated>
+    </task>
+    <task id="LOCAL-00006" summary="New repository for ListModel">
+      <option name="closed" value="true" />
+      <created>1762127130583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762127130583</updated>
+    </task>
+    <task id="LOCAL-00007" summary="New repository for ListItemModel">
+      <option name="closed" value="true" />
+      <created>1762127226209</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762127226209</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial set up for controller with GET and POST mapping">
+      <option name="closed" value="true" />
+      <created>1762127954762</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762127954762</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated controller with delete mapping">
+      <option name="closed" value="true" />
+      <created>1762128466787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762128466787</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed errors in controller and model">
+      <option name="closed" value="true" />
+      <created>1762135981892</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762135981892</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Controller for media created">
+      <option name="closed" value="true" />
+      <created>1762137775624</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762137775624</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ListController PostMapping updated and simplified">
+      <option name="closed" value="true" />
+      <created>1762137984790</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762137984790</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added PutMapping to ListController">
+      <option name="closed" value="true" />
+      <created>1762138191954</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762138191954</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated DeleteMapping on ListController">
+      <option name="closed" value="true" />
+      <created>1762138289344</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762138289344</updated>
+    </task>
+    <task id="LOCAL-00015" summary="PostMapping added to ListController for adding media to Rewind or Up Next list">
+      <option name="closed" value="true" />
+      <created>1762138497498</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762138497498</updated>
+    </task>
+    <task id="LOCAL-00016" summary="DeleteMapping added to ListController to handle deleting items from a specific list">
+      <option name="closed" value="true" />
+      <created>1762208674743</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762208674743</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created controller for List Items">
+      <option name="closed" value="true" />
+      <created>1762208747708</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762208747708</updated>
+    </task>
+    <task id="LOCAL-00018" summary="GetMapping added to ListItemController">
+      <option name="closed" value="true" />
+      <created>1762208955664</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762208955664</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PostMapping added to ListItemController for updating a title on a list">
+      <option name="closed" value="true" />
+      <created>1762209238373</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762209238373</updated>
+    </task>
+    <task id="LOCAL-00020" summary="PostMapping added to ListItemController for adding items to list. MediaController paths updated">
+      <option name="closed" value="true" />
+      <created>1762209280549</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1762209280549</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added actual PostMapping and fixed last commit to actual PutMapping">
+      <option name="closed" value="true" />
+      <created>1762209421973</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1762209421973</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added DeleteMapping to ListItemController">
+      <option name="closed" value="true" />
+      <created>1762209563502</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1762209563502</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed endpoints and added JSON annotations to handle HTTP requests">
+      <option name="closed" value="true" />
+      <created>1762214095147</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762214095147</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial model setup for media." />
+    <MESSAGE value="Repository setup for media" />
+    <MESSAGE value="Reworking model setup" />
+    <MESSAGE value="Models for differentiating which list a media item is on" />
+    <MESSAGE value="New repository for ListModel" />
+    <MESSAGE value="New repository for ListItemModel" />
+    <MESSAGE value="Initial set up for controller with GET and POST mapping" />
+    <MESSAGE value="Updated controller with delete mapping" />
+    <MESSAGE value="Fixed errors in controller and model" />
+    <MESSAGE value="Controller for media created" />
+    <MESSAGE value="ListController PostMapping updated and simplified" />
+    <MESSAGE value="Added PutMapping to ListController" />
+    <MESSAGE value="Updated DeleteMapping on ListController" />
+    <MESSAGE value="PostMapping added to ListController for adding media to Rewind or Up Next list" />
+    <MESSAGE value="DeleteMapping added to ListController to handle deleting items from a specific list" />
+    <MESSAGE value="Created controller for List Items" />
+    <MESSAGE value="GetMapping added to ListItemController" />
+    <MESSAGE value="PostMapping added to ListItemController for updating a title on a list" />
+    <MESSAGE value="PostMapping added to ListItemController for adding items to list. MediaController paths updated" />
+    <MESSAGE value="Added actual PostMapping and fixed last commit to actual PutMapping" />
+    <MESSAGE value="Added DeleteMapping to ListItemController" />
+    <MESSAGE value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
+  </component>
+</project>
