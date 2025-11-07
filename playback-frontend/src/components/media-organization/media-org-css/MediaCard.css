@@ -1,0 +1,76 @@
+.media-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(239, 167, 145, 0.747);
+    padding: 10px 15px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-family: "Share Tech Mono", monospace;
+    color: aliceblue;
+}
+
+.media-card:hover {
+    box-shadow: 0 15px 60px rgba(255, 110, 68, 1);
+    transition: 0.3s ease-in-out;
+}
+
+.media-card img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.media-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.media-card-content h3 {
+    margin: 0 0 5px;
+    font-size: 27px;
+    color: rgba(239, 167, 145, 1);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.media-card-content p {
+    margin: 2px 0;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+.media-card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.media-card-buttons button {
+    padding: 5px 10px;
+    background-color: rgba(239, 167, 145, 0.9);
+    border: none;
+    color: rgba(22, 82, 87, 255);
+    font-family: "Share Tech Mono", monospace;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .8s ease;
+}
+
+.media-card-buttons button:hover {
+    background-color: rgba(255, 110, 68, 1);
+    color: aliceblue;
+}
+
+
+h1.rewind-title {
+    text-align: center;
+    padding: 10px
+}

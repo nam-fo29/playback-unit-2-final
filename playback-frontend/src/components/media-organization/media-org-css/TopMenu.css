@@ -1,0 +1,47 @@
+.top-menu {
+    color: rgba(239, 167, 145, 255);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: repeating-linear-gradient(0deg, rgba(22, 82, 87, 0.04) 0px, rgba(22, 82, 87, 0.04) 1px, transparent 1px, transparent 11px, rgba(22, 82, 87, 0.04) 11px, rgba(22, 82, 87, 0.04) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(135deg, rgba(22, 82, 87, 0.04) 0px, rgba(22, 82, 87, 0.04) 1px, transparent 1px, transparent 11px, rgba(22, 82, 87, 0.04) 11px, rgba(22, 82, 87, 0.04) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(0deg, rgba(22, 82, 87, 0.04) 0px, rgba(22, 82, 87, 0.04) 1px, transparent 1px, transparent 11px, rgba(22, 82, 87, 0.04) 11px, rgba(22, 82, 87, 0.04) 12px, transparent 12px, transparent 32px), repeating-linear-gradient(135deg, rgba(22, 82, 87, 0.04) 0px, rgba(22, 82, 87, 0.04) 1px, transparent 1px, transparent 11px, rgba(22, 82, 87, 0.04) 11px, rgba(22, 82, 87, 0.04) 12px, transparent 12px, transparent 32px), linear-gradient(90deg, rgb(239, 167, 145), rgb(255, 110, 68));
+}
+
+h1.website-name {
+    font-size: 50px;
+    letter-spacing: 60px;
+    text-transform: uppercase;
+    color: rgba(22, 82, 87, 255);
+    text-decoration: underline;
+}
+
+h1.website-name::first-letter {
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+span.fifth-letter {
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: x-large;
+    color: aliceblue;
+    gap: 10px;
+
+}
+
+nav a:hover,
+nav a:visited:hover {
+    text-decoration: none;
+    color: rgba(22, 82, 87, 255);
+}
+
+nav a,
+nav a:visited {
+    color: rgb(244, 255, 252, 255);
+}

@@ -1,0 +1,186 @@
+body {
+    color: rgba(239, 167, 145, 255);
+    text-shadow: -1.5px 1px black;
+    font-family: "Share Tech Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(219deg,
+            rgba(246, 246, 246, 0.02) 0%,
+            rgba(246, 246, 246, 0.02) 20%,
+            rgba(225, 225, 225, 0.02) 20%,
+            rgba(225, 225, 225, 0.02) 40%,
+            rgba(136, 136, 136, 0.02) 40%,
+            rgba(136, 136, 136, 0.02) 60%,
+            rgba(216, 216, 216, 0.02) 60%,
+            rgba(216, 216, 216, 0.02) 80%,
+            rgba(35, 35, 35, 0.02) 80%,
+            rgba(35, 35, 35, 0.02) 100%),
+        linear-gradient(299deg,
+            rgba(213, 213, 213, 0.02) 0%,
+            rgba(213, 213, 213, 0.02) 20%,
+            rgba(150, 150, 150, 0.02) 20%,
+            rgba(150, 150, 150, 0.02) 40%,
+            rgba(161, 161, 161, 0.02) 40%,
+            rgba(161, 161, 161, 0.02) 60%,
+            rgba(186, 186, 186, 0.02) 60%,
+            rgba(186, 186, 186, 0.02) 80%,
+            rgba(28, 28, 28, 0.02) 80%,
+            rgba(28, 28, 28, 0.02) 100%),
+        linear-gradient(50deg,
+            rgba(157, 157, 157, 0.02) 0%,
+            rgba(157, 157, 157, 0.02) 16.667%,
+            rgba(147, 147, 147, 0.02) 16.667%,
+            rgba(147, 147, 147, 0.02) 33.334%,
+            rgba(42, 42, 42, 0.02) 33.334%,
+            rgba(42, 42, 42, 0.02) 50.001000000000005%,
+            rgba(214, 214, 214, 0.02) 50.001%,
+            rgba(214, 214, 214, 0.02) 66.668%,
+            rgba(34, 34, 34, 0.02) 66.668%,
+            rgba(34, 34, 34, 0.02) 83.33500000000001%,
+            rgba(211, 211, 211, 0.02) 83.335%,
+            rgba(211, 211, 211, 0.02) 100.002%),
+        linear-gradient(278deg,
+            rgba(79, 79, 79, 0.03) 0%,
+            rgba(79, 79, 79, 0.03) 20%,
+            rgba(217, 217, 217, 0.03) 20%,
+            rgba(217, 217, 217, 0.03) 40%,
+            rgba(5, 5, 5, 0.03) 40%,
+            rgba(5, 5, 5, 0.03) 60%,
+            rgba(200, 200, 200, 0.03) 60%,
+            rgba(200, 200, 200, 0.03) 80%,
+            rgba(125, 125, 125, 0.03) 80%,
+            rgba(125, 125, 125, 0.03) 100%),
+        linear-gradient(274deg,
+            rgba(235, 235, 235, 0.03) 0%,
+            rgba(235, 235, 235, 0.03) 12.5%,
+            rgba(100, 100, 100, 0.03) 12.5%,
+            rgba(100, 100, 100, 0.03) 25%,
+            rgba(44, 44, 44, 0.03) 25%,
+            rgba(44, 44, 44, 0.03) 37.5%,
+            rgba(228, 228, 228, 0.03) 37.5%,
+            rgba(228, 228, 228, 0.03) 50%,
+            rgba(36, 36, 36, 0.03) 50%,
+            rgba(36, 36, 36, 0.03) 62.5%,
+            rgba(72, 72, 72, 0.03) 62.5%,
+            rgba(72, 72, 72, 0.03) 75%,
+            rgba(30, 30, 30, 0.03) 75%,
+            rgba(30, 30, 30, 0.03) 87.5%,
+            rgba(109, 109, 109, 0.03) 87.5%,
+            rgba(109, 109, 109, 0.03) 100%),
+        linear-gradient(90deg, rgb(22, 82, 87),
+            rgb(22, 82, 87));
+    margin-bottom: 200px;
+}
+
+
+.media-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-shadow: -1px 1px black;
+}
+
+.start-search {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -25px;
+    letter-spacing: 15px;
+}
+
+.submit-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.media-buttons button,
+.submit-search {
+    font-family: "Share Tech Mono", monospace;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(239, 167, 145, 255);
+    color: rgba(22, 82, 87, 255);
+    transition: background-color 0.3s, transition 0.3s;
+}
+
+.submit-search:hover {
+    background-color: rgba(255, 110, 68, 1);
+    color: aliceblue;
+    text-shadow: -1px 1px black;
+}
+
+.media-buttons .selected {
+    background-color: rgba(255, 110, 68, 1);
+    color: aliceblue;
+    font-weight: bold;
+    border: 2px solid rgba(22, 82, 87, 255);
+    text-shadow: 1px 1px black;
+
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    width: 600px;
+    max-width: 6000px;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.search-bar:placeholder-shown {
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid rgba(22, 82, 87);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    background-color: rgba(255, 110, 68, 1);
+    color: rgba(22, 82, 87, 255);
+    margin-bottom: 20px;
+    outline: none;
+    box-sizing: 2px 2px 6px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: rgba(239, 167, 145, 255);
+}
+
+.search-results {
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap: 100px;
+    font-size: small;
+    justify-content: center;
+    position:relative;
+    top: 208px;
+}
+
+.footer-nav {
+    font-size: small;
+    align-items: center;
+}
+
+.footer-nav a:visited:hover, .footer-nav a:hover {
+    color: rgba(255, 110, 68, 1) !important;
+}
+
+.error-message {
+    text-align: center;
+}
