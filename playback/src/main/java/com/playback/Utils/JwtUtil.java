@@ -2,10 +2,12 @@ package com.playback.Utils;
 
 
 import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +18,11 @@ public class JwtUtil {
 
     private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60 * 1000;
 
-    @Value("${jwt.secret}")
-    private String secret;
+    private final SecretKey secretKey;
+
+    public JwtUtil(@Value("${jwt.secret}") String secret) {
+        this.secretKey = Keys.hmacShaKeyFor(secret.getBytes());
+    }
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
@@ -27,7 +32,7 @@ public class JwtUtil {
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
-                .signWith(SignatureAlgorithm.HS512, secret)
+                .signWith(secretKey, SignatureAlgorithm.HS512)
                 .compact();
     }
 
@@ -36,7 +41,7 @@ public class JwtUtil {
     }
 
     private <T> T getClaimFromToken(String token, Function<Claims, T> claimResolver) {
-        final Claims claims = Jwts.parser().setSigningKey(secret).parseClaimsJwt(token).getBody();
+        final Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
         return claimResolver.apply(claims);
     }
 
