@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "../components/media-search/SearchBar";
 import MediaList from "../components/media-organization/MediaList";
+import UserAuth from "./UserAuth";
 
 //Due to security issues with GitHub, I have stored my API keys in a .env file that has not been pushed to GitHub.
 
@@ -10,7 +11,33 @@ const RAWG_API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 
 const Home = ({ onAddToList }) => {
     const [results, setResults] = useState([]);
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const response = await fetch("http://localhost:8080/auth/status", { 
+                    method: "GET",
+                    credentials: "include"
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    setIsAuthenticated(data.isAuthenticated === true);
+                } else {
+                    setIsAuthenticated(false);
+                }
+            } catch {
+                setIsAuthenticated(false);
+            }
+        };
+
+        checkAuth();
+    }, []);
+
+    const handleAuthSuccess = () => {
+        setIsAuthenticated(true);
+    };
 
     const fetchMedia = async (query, type) => {
         let mediaData = [];
@@ -75,6 +102,10 @@ const Home = ({ onAddToList }) => {
         }
     }; //This entire codeblock is in a try...catch block for error handling purposes. The program tries to fetch data from the API based on the query made by the user. If the query does not match anything in the API, the catch block triggers and returns an error message in the UI.
 
+    if (!isAuthenticated) {
+        return <UserAuth onAuthSuccess={handleAuthSuccess} />;
+    }
+    
     return (
         <div>
             <h1 className="start-search">Search Titles To Start Your List</h1>
