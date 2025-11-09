@@ -1,21 +1,12 @@
 import { useState } from "react";
 
-cont UserAuth = ({ onAuthSucces }) => {
+const UserAuth = ({ onAuthSuccess }) => {
     const [isLoggedin, setIsLoggedin] = useState(true);
     const [formData, setFormData] = useState({
         username: "",
         password: "",
     });
     const [error, setError] = useState(null);
-
-    const toggleForm = () => {
-        setIsLoggedin(!isLoggedin);
-        setError(null);
-    }
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,6 +25,8 @@ cont UserAuth = ({ onAuthSucces }) => {
             });
 
             if (!response.ok) throw new Error("Authentication failed");
+
+            if (onAuthSuccess) onAuthSuccess();
             
             window.location.href = "/";
         } catch (err) {
@@ -44,7 +37,7 @@ cont UserAuth = ({ onAuthSucces }) => {
             
     return (
         <div className="auth-container">
-            <h2>{isLoggedin ? "Register" : "Login"}</h2>
+            <h2>{isLoggedin ? "Login" : "Register"}</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -62,10 +55,10 @@ cont UserAuth = ({ onAuthSucces }) => {
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                     required
                 />
-                <button type="submit">{isLoggedin ? "Register" : "Login"}</button>
+                <button type="submit">{isLoggedin ? "Login" : "Register"}</button>
             </form>
             {error && <p className="error">{error}</p>}
-            <p> {isLoggedin ? "Already have an account?" : "Don't have an account?"}{" "}
+            <p> {isLoggedin ? "Don't have an account?" : "Already have an account?"}{" "}
             <button type="button" onClick={() => setIsLoggedin(!isLoggedin)} className="toggle-button"> 
                 {isLoggedin ? "Register here" : "Login here"}
             </button>
