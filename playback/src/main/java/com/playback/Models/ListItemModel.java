@@ -1,4 +1,4 @@
-package com.playback.Models;
+/*package com.playback.Models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -47,4 +47,8 @@ public class ListItemModel {
     public void setMedia(MediaModel media) {
         this.media = media;
     }
-}
+
+    public Long getMediaId() {
+        return (media != null) ? media.getId() : null;
+    }
+}*/

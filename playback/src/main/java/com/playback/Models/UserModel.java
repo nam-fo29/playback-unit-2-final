@@ -12,9 +12,6 @@ import java.util.Collections;
 public class UserModel implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(unique = true, nullable = false)
     private String username;
 
@@ -29,9 +26,6 @@ public class UserModel implements UserDetails {
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
-    }
 
     @Override
     public String getUsername() {

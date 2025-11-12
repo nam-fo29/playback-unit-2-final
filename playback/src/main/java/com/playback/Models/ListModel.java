@@ -16,9 +16,13 @@ public class ListModel {
 
     private String name;
 
-    @OneToMany(mappedBy = "list", cascade = CascadeType.ALL, orphanRemoval = true)
+   /* @OneToMany(mappedBy = "list", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private List<ListItemModel> items;
+    private List<ListItemModel> items;*/
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserModel user;
 
     public ListModel() {
     }
@@ -40,11 +44,19 @@ public class ListModel {
         this.name = name;
     }
 
-    public List<ListItemModel> getItems() {
+    /*public List<ListItemModel> getItems() {
         return items;
     }
 
     public void setItems(List<ListItemModel> items) {
         this.items = items;
+    }*/
+
+    public UserModel getUser() {
+        return user;
+    }
+
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 }
