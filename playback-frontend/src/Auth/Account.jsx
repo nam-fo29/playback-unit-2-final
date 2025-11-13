@@ -44,9 +44,10 @@ export default function Account({ setLists }) {
 
     return (
         <div className="account-form">
-            <h2>{isLogin ? "Login" : "Register"}</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 className="account-title">{isLogin ? "Login" : "Register"}</h2>
+            <form className="login-register" onSubmit={handleSubmit}>
                 <input
+                className="user-username"
                     type="text"
                     placeholder="Username"
                     value={username}
@@ -54,19 +55,20 @@ export default function Account({ setLists }) {
                     required
                 />
                 <input
+                className="user-password"
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">{isLogin ? "Login" : "Register"}</button>
+                <button className="login-reg-button" type="submit">{isLogin ? "Login" : "Register"}</button>
             </form>
             {error && <p className="error">{error}</p>}
             {success && <p className="success">{success}</p>}
             <p>
                 {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-                <button onClick={() => setIsLogin(!isLogin)}>
+                <button className="switch-log-reg" onClick={() => setIsLogin(!isLogin)}>
                     {isLogin ? "Register here" : "Login here"}
                 </button>
             </p>
