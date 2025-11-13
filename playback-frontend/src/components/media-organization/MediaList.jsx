@@ -14,7 +14,7 @@ const MediaList = ({ list, title, onAddToList, showDelete = false, onDelete, hid
                 {list.map((media, i) => (
                     <MediaCard key={i} 
                     media={media} 
-                    onAddToList={onAddToList} 
+                    onAddToList={(media, listType) => onAddToList(media, listType)} 
                     showDelete={showDelete} 
                     onDelete={onDelete} 
                     hideUpNextButton={hideUpNextButton} />

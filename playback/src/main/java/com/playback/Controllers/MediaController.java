@@ -57,7 +57,7 @@ public class MediaController {
         media.setUser(currentUser);
 
         if (media.getListType() == null ||
-                (!media.getListType().equals("rewind") && !media.getListType().equals("upNext"))) {
+                (!media.getListType().equalsIgnoreCase("rewind") && !media.getListType().equalsIgnoreCase("upNext"))) {
             media.setListType("rewind");
         }
         return mediaRepository.save(media);

@@ -89,7 +89,7 @@ body {
     letter-spacing: 15px;
 }
 
-.submit-search {
+.submit-search, .login-reg-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,7 +108,26 @@ body {
     transition: background-color 0.3s, transition 0.3s;
 }
 
+.login-reg-button, .switch-log-reg, .logout-button, .refresh-rewind, .refresh-upNext {
+        font-family: "Share Tech Mono", monospace;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(239, 167, 145, 255);
+    color: rgba(22, 82, 87, 255);
+    transition: background-color 0.3s, transition 0.3s;
+
+}
+
 .submit-search:hover {
+    background-color: rgba(255, 110, 68, 1);
+    color: aliceblue;
+    text-shadow: -1px 1px black;
+}
+
+.login-reg-button:hover, .switch-log-reg:hover, .logout-button:hover, .refresh-rewind:hover, .refresh-upNext:hover {
     background-color: rgba(255, 110, 68, 1);
     color: aliceblue;
     text-shadow: -1px 1px black;
@@ -123,7 +142,16 @@ body {
 
 }
 
-.search-bar {
+.login-reg-button .selected {
+    background-color: rgba(255, 110, 68, 1);
+    color: aliceblue;
+    font-weight: bold;
+    border: 2px solid rgba(22, 82, 87, 255);
+    text-shadow: 1px 1px black;
+
+}
+
+.search-bar, .user-username, .user-password {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +180,7 @@ body {
     transition: border-color 0.3s;
 }
 
-.search-bar input[type="text"]:focus {
+.search-bar, .user-password, .user-username input[type="text"]:focus {
     border-color: rgba(239, 167, 145, 255);
 }
 
@@ -184,3 +212,47 @@ body {
 .error-message {
     text-align: center;
 }
+
+
+.user-password, .user-username {
+    width: 500px;
+    padding: 10px 20px;
+    border: 2px solid rgba(22, 82, 87);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    background-color: rgba(255, 110, 68, 1);
+    color: rgba(22, 82, 87, 255);
+    margin-bottom: 20px;
+    outline: none;
+    box-sizing: 2px 2px 6px;
+    transition: border-color 0.3s;
+}
+
+.user-password, .user-username:placeholder-shown {
+    text-align: center;
+}
+
+.user-username input[type="text"]:focus {
+    border-color: rgba(239, 167, 145, 255);
+
+}
+
+.user-password input[type="text"]:focus {
+    border-color: rgba(239, 167, 145, 255);
+}
+
+.login-reg-button, .switch-log-reg, .logout-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+

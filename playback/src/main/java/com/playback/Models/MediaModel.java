@@ -15,6 +15,9 @@ public class MediaModel {
     private String type;
     @JsonProperty("list_type")
     private String listType;
+    private String year;
+    private String poster;
+    private String rated;
 
     @ManyToOne
     @JoinColumn(name = "username", referencedColumnName = "username", nullable = false)
@@ -22,11 +25,14 @@ public class MediaModel {
 
     public MediaModel() {}
 
-    public MediaModel(String title, String type, UserModel user, String listType) {
+    public MediaModel(String title, String type, UserModel user, String listType, String year, String poster, String rated) {
         this.title = title;
         this.type = type;
         this.user = user;
         this.listType = listType;
+        this.year = year;
+        this.poster = poster;
+        this.rated = rated;
     }
 
 
@@ -38,8 +44,13 @@ public class MediaModel {
     public UserModel getUser() { return user; }
     public void setUser(UserModel user) { this.user = user; }
     public String getListType() {return listType;}
-
     public void setListType(String listType) {
         this.listType = listType;
     }
+    public String getYear() { return year; }
+    public void setYear() { this.year = year; }
+    public String getPoster() { return poster; }
+    public void setPoster() { this.poster = poster; }
+    public String getRated() { return rated; }
+    public void setRated() { this.rated = rated; }
 }

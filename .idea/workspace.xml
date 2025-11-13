@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="application.properties">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="Final working backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback-frontend/src/components/media-organization/MediaList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/playback-frontend/src/components/media-organization/MediaList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback-frontend/src/components/media-organization/media-org-css/MediaCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/playback-frontend/src/components/media-organization/media-org-css/MediaCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback-frontend/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/playback-frontend/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback-frontend/src/pages/Rewind.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/playback-frontend/src/pages/Rewind.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback-frontend/src/pages/UpNext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/playback-frontend/src/pages/UpNext.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/MediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/MediaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/ListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/ListModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/MediaModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/MediaModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/ListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/ListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/MediaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/MediaRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/auth",
+    "git-widget-placeholder": "feature/bug-fixes",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -101,14 +100,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761605616075</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Initial model setup for media.">
-      <option name="closed" value="true" />
-      <created>1762123212259</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1762123212259</updated>
     </task>
     <task id="LOCAL-00002" summary="Repository setup for media">
       <option name="closed" value="true" />
@@ -494,11 +485,18 @@
       <option name="project" value="LOCAL" />
       <updated>1762980731625</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Final working backend">
+      <option name="closed" value="true" />
+      <created>1763059630512</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1763059630513</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
     <MESSAGE value="Starting auth setup with UserModel" />
     <MESSAGE value="First pass at setting up UserModel" />
     <MESSAGE value="UserRepository setup" />
@@ -523,6 +521,7 @@
     <MESSAGE value="Security Configurations for spring security" />
     <MESSAGE value="Lots of tinkering to get JWT tokens to work properly" />
     <MESSAGE value="application.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="application.properties" />
+    <MESSAGE value="Final working backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final working backend" />
   </component>
 </project>

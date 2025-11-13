@@ -7,7 +7,7 @@ import { useState } from "react";
 const UpNext = ({ lists }) => {
     const mediaSortType = ["Movies", "TV Shows", "Video Games", "Books"];
 
-    const [setRefreshState] = useState(false);
+    const [_, setRefreshState] = useState(false);
 
 
         const handleDeleteFromListBackend = async (media, listType) => {
