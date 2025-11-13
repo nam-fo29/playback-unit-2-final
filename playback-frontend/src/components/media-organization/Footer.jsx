@@ -9,6 +9,7 @@ const Footer = () => {
                 <Link to='/Rewind'>Rewind</Link>
                 <Link to='/Up-Next'>Up Next</Link>
                 <Link to='/About'>About</Link>
+                <Link to='/account'>Account</Link>
             </nav>
         </footer>
     )

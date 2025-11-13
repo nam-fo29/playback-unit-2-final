@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBar from "../components/media-search/SearchBar";
 import MediaList from "../components/media-organization/MediaList";
+import { createMedia } from "../api";
 
 //Due to security issues with GitHub, I have stored my API keys in a .env file that has not been pushed to GitHub.
 
@@ -10,7 +11,25 @@ const RAWG_API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 
 const Home = ({ onAddToList }) => {
     const [results, setResults] = useState([]);
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
+
+    const handleAddToListBackend = async (media, listType) => {
+        try {
+            const payload = {
+                title: media.title,
+                type: media.type,
+                listType: listType || "rewind",
+            };
+
+            const created = await createMedia(payload);
+            
+            
+            onAddToList(created, created.listType);
+        } catch {
+            setError("Failed to add media to list. Please try again.");
+        }
+    };
+
 
     const fetchMedia = async (query, type) => {
         let mediaData = [];
@@ -75,12 +94,13 @@ const Home = ({ onAddToList }) => {
         }
     }; //This entire codeblock is in a try...catch block for error handling purposes. The program tries to fetch data from the API based on the query made by the user. If the query does not match anything in the API, the catch block triggers and returns an error message in the UI.
 
+
     return (
         <div>
             <h1 className="start-search">Search Titles To Start Your List</h1>
             <SearchBar onSearch={fetchMedia} />
             {error && <p className="error-message">{error}</p>}
-            <MediaList className="search-stuff" list={results} title="Search Results" onAddToList={onAddToList} />
+            <MediaList className="search-stuff" list={results} title="Search Results" onAddToList={handleAddToListBackend} />
         </div>
     );
 };
