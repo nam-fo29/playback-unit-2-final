@@ -70,9 +70,7 @@ public class MediaController {
 
         return mediaRepository.findByIdAndUser(id, currentUser)
                 .map(media -> {
-                    media.setTitle(mediaDetails.getListType());
-                    /*media.setType(mediaDetails.getType());*/
-                   /* media.setList(mediaDetails.getList());*/
+                    media.setListType(mediaDetails.getListType());
                     return mediaRepository.save(media);
                 })
                 .orElse(null);

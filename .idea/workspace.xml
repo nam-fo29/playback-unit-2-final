@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="Fixed endpoints and added JSON annotations to handle HTTP requests">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playback/app.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="c908862b-c2fa-4115-ba61-c3245c229f88" name="Changes" comment="application.properties">
       <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playback/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/MediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Controllers/MediaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/ListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/ListModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/MediaModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Models/MediaModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/ListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/ListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/MediaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/playback/src/main/java/com/playback/Repositories/MediaRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,25 +31,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nam-fo29"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nam-fo29&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nam-fo29/playback-unit-2-final.git",
-    "accountId": "5dd71974-192e-4281-80b9-7d6e7fd5cd4a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nam-fo29/playback-unit-2-final.git&quot;,
+    &quot;accountId&quot;: &quot;5dd71974-192e-4281-80b9-7d6e7fd5cd4a&quot;
   }
-}]]></component>
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="jdkForImporter" value="21" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="34fXUXCI3aAktfg8BWxJLZN1gWF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,7 +71,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/crud-ops"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feature/auth",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
 }]]></component>
   <component name="RunManager">
@@ -272,32 +286,243 @@
       <option name="project" value="LOCAL" />
       <updated>1762214095147</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Starting auth setup with UserModel">
+      <option name="closed" value="true" />
+      <created>1762658113016</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762658113016</updated>
+    </task>
+    <task id="LOCAL-00025" summary="First pass at setting up UserModel">
+      <option name="closed" value="true" />
+      <created>1762658734155</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762658734155</updated>
+    </task>
+    <task id="LOCAL-00026" summary="UserRepository setup">
+      <option name="closed" value="true" />
+      <created>1762659072481</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659072481</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Beginning DTO setup for account registration">
+      <option name="closed" value="true" />
+      <created>1762659179338</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659179338</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Initial setup for registration DTO">
+      <option name="closed" value="true" />
+      <created>1762659320487</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659320487</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added fixes to registration DTO">
+      <option name="closed" value="true" />
+      <created>1762659420275</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659420275</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Initial setup for Login DTO">
+      <option name="closed" value="true" />
+      <created>1762659477735</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659477735</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Login DTO setup first pass">
+      <option name="closed" value="true" />
+      <created>1762659580818</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659580818</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Initial setup for User DTO">
+      <option name="closed" value="true" />
+      <created>1762659645343</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659645343</updated>
+    </task>
+    <task id="LOCAL-00033" summary="First pass at User DTO">
+      <option name="closed" value="true" />
+      <created>1762659755937</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1762659755937</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Beginning JWT utils">
+      <option name="closed" value="true" />
+      <created>1762660213599</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1762660213599</updated>
+    </task>
+    <task id="LOCAL-00035" summary="First pass at JWT utils">
+      <option name="closed" value="true" />
+      <created>1762661538242</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1762661538242</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Beginning AuthService">
+      <option name="closed" value="true" />
+      <created>1762661689134</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1762661689134</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Needed DTO for Auth">
+      <option name="closed" value="true" />
+      <created>1762665418454</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762665418454</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Authentication request DTO">
+      <option name="closed" value="true" />
+      <created>1762665519449</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1762665519449</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Authentication response DTO">
+      <option name="closed" value="true" />
+      <created>1762665719213</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1762665719213</updated>
+    </task>
+    <task id="LOCAL-00040" summary="AuthService updated with DTOs">
+      <option name="closed" value="true" />
+      <created>1762666182125</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1762666182125</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Initial set up for controller for auth added.">
+      <option name="closed" value="true" />
+      <created>1762666553472</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1762666553472</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Service for user details to begin spring security setup">
+      <option name="closed" value="true" />
+      <created>1762668611647</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1762668611647</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Service for user details to begin spring security setup continued">
+      <option name="closed" value="true" />
+      <created>1762668963042</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1762668963042</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Service for user details to begin spring security setup continued">
+      <option name="closed" value="true" />
+      <created>1762669034948</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1762669034948</updated>
+    </task>
+    <task id="LOCAL-00045" summary="JwtRequestFilter setup for spring security">
+      <option name="closed" value="true" />
+      <created>1762669733741</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1762669733741</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Security Configurations for spring security">
+      <option name="closed" value="true" />
+      <created>1762671685764</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1762671685764</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Lots of tinkering to get JWT tokens to work properly">
+      <option name="closed" value="true" />
+      <created>1762721140570</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1762721140570</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Lots of tinkering to get JWT tokens to work properly">
+      <option name="closed" value="true" />
+      <created>1762977667321</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1762977667321</updated>
+    </task>
+    <task id="LOCAL-00049" summary="application.properties">
+      <option name="closed" value="true" />
+      <created>1762980731625</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1762980731625</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial model setup for media." />
-    <MESSAGE value="Repository setup for media" />
-    <MESSAGE value="Reworking model setup" />
-    <MESSAGE value="Models for differentiating which list a media item is on" />
-    <MESSAGE value="New repository for ListModel" />
-    <MESSAGE value="New repository for ListItemModel" />
-    <MESSAGE value="Initial set up for controller with GET and POST mapping" />
-    <MESSAGE value="Updated controller with delete mapping" />
-    <MESSAGE value="Fixed errors in controller and model" />
-    <MESSAGE value="Controller for media created" />
-    <MESSAGE value="ListController PostMapping updated and simplified" />
-    <MESSAGE value="Added PutMapping to ListController" />
-    <MESSAGE value="Updated DeleteMapping on ListController" />
-    <MESSAGE value="PostMapping added to ListController for adding media to Rewind or Up Next list" />
-    <MESSAGE value="DeleteMapping added to ListController to handle deleting items from a specific list" />
-    <MESSAGE value="Created controller for List Items" />
-    <MESSAGE value="GetMapping added to ListItemController" />
-    <MESSAGE value="PostMapping added to ListItemController for updating a title on a list" />
-    <MESSAGE value="PostMapping added to ListItemController for adding items to list. MediaController paths updated" />
-    <MESSAGE value="Added actual PostMapping and fixed last commit to actual PutMapping" />
-    <MESSAGE value="Added DeleteMapping to ListItemController" />
     <MESSAGE value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed endpoints and added JSON annotations to handle HTTP requests" />
+    <MESSAGE value="Starting auth setup with UserModel" />
+    <MESSAGE value="First pass at setting up UserModel" />
+    <MESSAGE value="UserRepository setup" />
+    <MESSAGE value="Beginning DTO setup for account registration" />
+    <MESSAGE value="Initial setup for registration DTO" />
+    <MESSAGE value="Added fixes to registration DTO" />
+    <MESSAGE value="Initial setup for Login DTO" />
+    <MESSAGE value="Login DTO setup first pass" />
+    <MESSAGE value="Initial setup for User DTO" />
+    <MESSAGE value="First pass at User DTO" />
+    <MESSAGE value="Beginning JWT utils" />
+    <MESSAGE value="First pass at JWT utils" />
+    <MESSAGE value="Beginning AuthService" />
+    <MESSAGE value="Needed DTO for Auth" />
+    <MESSAGE value="Authentication request DTO" />
+    <MESSAGE value="Authentication response DTO" />
+    <MESSAGE value="AuthService updated with DTOs" />
+    <MESSAGE value="Initial set up for controller for auth added." />
+    <MESSAGE value="Service for user details to begin spring security setup" />
+    <MESSAGE value="Service for user details to begin spring security setup continued" />
+    <MESSAGE value="JwtRequestFilter setup for spring security" />
+    <MESSAGE value="Security Configurations for spring security" />
+    <MESSAGE value="Lots of tinkering to get JWT tokens to work properly" />
+    <MESSAGE value="application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="application.properties" />
   </component>
 </project>

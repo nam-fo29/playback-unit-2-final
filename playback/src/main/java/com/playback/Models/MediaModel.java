@@ -1,5 +1,6 @@
 package com.playback.Models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,11 +13,8 @@ public class MediaModel {
 
     private String title;
     private String type;
+    @JsonProperty("list_type")
     private String listType;
-
-    /*@ManyToOne
-    @JoinColumn(name = "list_id", nullable = false)
-    private ListModel list;*/
 
     @ManyToOne
     @JoinColumn(name = "username", referencedColumnName = "username", nullable = false)
@@ -24,10 +22,9 @@ public class MediaModel {
 
     public MediaModel() {}
 
-    public MediaModel(String title, String type, ListModel list, UserModel user, String listType) {
+    public MediaModel(String title, String type, UserModel user, String listType) {
         this.title = title;
         this.type = type;
-        /*this.list = list;*/
         this.user = user;
         this.listType = listType;
     }
@@ -38,8 +35,6 @@ public class MediaModel {
     public void setTitle(String title) { this.title = title; }
     public String getType() { return type; }
     public void setType(String type) { this.type = type; }
-   /* public ListModel getList() { return list; }
-    public void setList(ListModel list) { this.list = list; }*/
     public UserModel getUser() { return user; }
     public void setUser(UserModel user) { this.user = user; }
     public String getListType() {return listType;}
