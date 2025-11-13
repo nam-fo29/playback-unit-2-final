@@ -10,11 +10,6 @@ import { useState, useEffect, useContext } from "react";
 import TopMenu from "./components/media-organization/TopMenu";
 import Footer from "./components/media-organization/Footer";
 import AuthProvider, { AuthContext } from "./Context/AuthContext";
-//import LoginForm from "./pages/LoginForm";
-//import PrivateRoute from "./Auth/PrivateRoute";
-//import Login from "./Auth/Login";
-//import RegistrationForm from "./pages/RegistrationForm";
-//import Register from "./Auth/Register";
 import Account from "./Auth/Account";
 import { removeMediaFromList, getMediaForList, addMediaToList } from "./api";
 
@@ -99,17 +94,6 @@ const App = () => {
     }
   }
 
-    /*setLists(prev => ({
-      ...prev,
-      [listType]: {
-        ...prev[listType],
-        [media.type]: [...(prev[listType][media.type] || []), media]
-      }
-    }));
-    } catch {
-      setError("Failed to add media to list. Please try again.");
-    }
-  };*/
 
   const handleDeleteFromList = async (media, listName) => {
     try {

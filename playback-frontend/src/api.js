@@ -29,37 +29,12 @@ export async function login(username, password) {
         return { success: false, message: error.message };
     }
 }
-/*export async function fetchLists() {
-    const response = await fetch(`${BASE_URL}/lists`);
-    if (!response.ok) throw new Error('Failed to fetch lists');
-    return await response.json();
-}
 
-export async function addMediaToList(listName, mediaId) {
-    const response = await authFetch(`${BASE_URL}/lists/${listName}/items/${mediaId}`, {
-        method: 'POST',
-});
-    if (!response.ok) throw new Error('Failed to add media to list');
-    return {success : true};
-}
-export async function removeMediaFromList(listName, mediaId) {
-    const token = localStorage.getItem("token");
-    const response = await fetch(`${BASE_URL}/lists/${listName}/remove/${mediaId}`, {
-        method: 'DELETE',
-        headers: {
-            "Authorization": `Bearer ${token}`,
-            "Content-Type": "application/json"
-        },
-    });
-
-    if (!response.ok) throw new Error('Failed to remove media from list');
-    return { success: true };
-}*/
 
 export async function addMediaToList(listType, mediaId) {
     const token = localStorage.getItem("token");
     const response = await fetch(`${BASE_URL}/media/${mediaId}`, {
-        method: 'PUT',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -72,7 +47,7 @@ export async function addMediaToList(listType, mediaId) {
 
 export async function removeMediaFromList(listName, mediaId) {
     const token = localStorage.getItem("token");
-    const response = await fetch(`${BASE_URL}/lists/${listName}/items/${mediaId}`, {
+    const response = await fetch(`${BASE_URL}/media/${mediaId}`, {
         method: 'DELETE',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -106,14 +81,6 @@ export const createMedia = async (media) => {
 
     };
 
-    /*export const getLists = async () => {
-        try {
-            const response = await fetch(`${BASE_URL}/lists`);
-            return await response.json();
-        } catch (error) {
-            return { success: false, message: error.message };
-        }
-    };*/
 
     export const getLists = async () => {
         try {

@@ -12,10 +12,11 @@ const TopMenu = () => {
             <h1 className="website-name">Play<span className="fifth-letter">B</span>ack</h1>
             <nav>
                 <Link to='/' className="home-nav">Home</Link>
-                <Link to='/About'>About</Link>
                 <Link to='/Rewind'>Rewind</Link>
                 <Link to='/Up-Next'>Up Next</Link>
                 <Link to='/account'>Account</Link>
+                <Link to='/About'>About</Link>
+
             </nav>
         </header>
     );
