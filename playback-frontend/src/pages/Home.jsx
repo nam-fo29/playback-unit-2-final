@@ -14,11 +14,15 @@ const Home = ({ onAddToList }) => {
     const [error, setError] = useState(null);
 
     const handleAddToListBackend = async (media, listType) => {
+        console.log("DEBUG: Adding to list:", media.title, "listType:", listType);
         try {
             const payload = {
                 title: media.title,
                 type: media.type,
-                listType: listType || "rewind",
+                year: media.year,
+                poster: media.poster,
+                rated: media.rated,
+                list_type: listType || "rewind",
             };
 
             const created = await createMedia(payload);

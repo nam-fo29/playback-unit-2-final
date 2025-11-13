@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Rewind = ({ lists }) => {
 
-   const [setRefreshState] = useState(false);
+   const [_, setRefreshState] = useState(false);
 
     const mediaSortType = ["Movies", "TV Shows", "Video Games", "Books"];
 
@@ -37,9 +37,6 @@ const Rewind = ({ lists }) => {
     }
 };
 
-    
-
-
 
     const handleRefreshRewind = async () => {
     try {
@@ -66,7 +63,7 @@ const Rewind = ({ lists }) => {
     }
 }
 
-    
+
 
     return (
         <div className="rewind">
